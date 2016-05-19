@@ -11,17 +11,17 @@
 
 @implementation NSMutableArray (CJNSMutableArray)
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Method orginalMethod = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(addObject:));
-        Method newMethod = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(CJAddObject:));
-        method_exchangeImplementations(orginalMethod, newMethod);
-    });
+//该方法在类或者分类第一次加载内存的时候调用
++ (void)load {
+    //NSMutableArray真正的类名应该是__NSArrayM
+    Method orginalMethod = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(addObject:));
+    Method newMethod = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(CJAddObject:));
+    //交换方法
+    method_exchangeImplementations(orginalMethod, newMethod);
 }
 
-- (void)CJAddObject:(id)anObject
-{
+- (void)CJAddObject:(id)anObject {
+    //这里因为已经交换了方法，如果调用addObject:会出现死循环
     if (nil != anObject) {
         [self CJAddObject:anObject];
     }
