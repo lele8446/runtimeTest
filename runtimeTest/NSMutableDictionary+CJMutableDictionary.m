@@ -11,17 +11,24 @@
 
 @implementation NSMutableDictionary (CJMutableDictionary)
 
+/*  每个类调用一次initialize。这个调用的时间发生在你的类接收到消息之前，但是在它的超类接收到initialize之后。
+ *  需判断［self class］
+ */
++ (void)initialize {
+    NSLog(@"执行initialize");
+}
+
 //该方法在类或者分类第一次加载内存的时候调用
 + (void)load{
-    
+    NSLog(@"执行swizzling");
     //swizzling应该总是在dispatch_once中执行
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
         Method orginalMethod = class_getInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(setObject:forKey:));
         Method newMethod = class_getInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(CJSetObject:forKey:));
         //交换方法
         method_exchangeImplementations(orginalMethod, newMethod);
-    });
+//    });
     
 }
 
