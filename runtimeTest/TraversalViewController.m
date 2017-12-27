@@ -11,6 +11,7 @@
 
 @interface TraversalViewController ()
 @property (nonatomic, weak)IBOutlet UITextField *textField;
+@property (nonatomic, strong) UIDatePicker *datePicker;
 
 @end
 
@@ -30,7 +31,7 @@
     free(ivars);
     
     unsigned int outCount, i;
-    objc_property_t *properties = class_copyPropertyList([UILabel class], &outCount);
+    objc_property_t *properties = class_copyPropertyList([UITextField class], &outCount);
     for (i = 0; i<outCount; i++)
     {
         objc_property_t property = properties[i];
@@ -43,11 +44,12 @@
     /*
      *通过遍历结果获得删除按钮对应的成员变量为_clearButton，通过kvc得到clearButton
      */
-    UIButton *button = [self.textField valueForKeyPath:@"_clearButton"];
+    self.datePicker = [[UIDatePicker alloc] init];
+    UIPickerView *button = [self.datePicker valueForKeyPath:@"_pickerView"];
     
     //自定义删除按钮的图片
-    [button setImage:[UIImage imageNamed:@"menu_item_can"] forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"menu_item_h"] forState:UIControlStateHighlighted];
+//    [button setImage:[UIImage imageNamed:@"menu_item_can"] forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"menu_item_h"] forState:UIControlStateHighlighted];
     
 }
 

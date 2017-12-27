@@ -7,7 +7,7 @@
 //
 
 #import "NSMutableDictionary+CJMutableDictionary.h"
-#import <objc/runtime.h>
+#import "NSObject+CJExtension.h"
 
 @implementation NSMutableDictionary (CJMutableDictionary)
 
@@ -22,14 +22,10 @@
 + (void)load{
     NSLog(@"执行swizzling");
     //swizzling应该总是在dispatch_once中执行
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-        Method orginalMethod = class_getInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(setObject:forKey:));
-        Method newMethod = class_getInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(CJSetObject:forKey:));
-        //交换方法
-        method_exchangeImplementations(orginalMethod, newMethod);
-//    });
-    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self swizzleOriginalSEL:@selector(setObject:forKey:) withSwizzlingSEL:@selector(CJSetObject:forKey:) targetClass:NSClassFromString(@"__NSDictionaryM")];
+    });
 }
 
 - (void)CJSetObject:(id)anObject forKey:(NSString *)aKey

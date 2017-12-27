@@ -15,16 +15,17 @@
 		43DAE8F91C772B9D00599158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43DAE8F71C772B9D00599158 /* LaunchScreen.storyboard */; };
 		43DAE9041C772B9D00599158 /* runtimeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE9031C772B9D00599158 /* runtimeTestTests.m */; };
 		43DAE90F1C772B9D00599158 /* runtimeTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE90E1C772B9D00599158 /* runtimeTestUITests.m */; };
-		43DAE91E1C77341B00599158 /* TraversalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE91D1C77341B00599158 /* TraversalViewController.m */; settings = {ASSET_TAGS = (); }; };
-		43DAE9261C7839CE00599158 /* menu_item_can@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DAE9241C7839CE00599158 /* menu_item_can@3x.png */; settings = {ASSET_TAGS = (); }; };
-		43DAE9291C7977F800599158 /* menu_item_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DAE9271C7977F800599158 /* menu_item_h@2x.png */; settings = {ASSET_TAGS = (); }; };
-		43DAE92A1C7977F800599158 /* menu_item_h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DAE9281C7977F800599158 /* menu_item_h@3x.png */; settings = {ASSET_TAGS = (); }; };
-		43DAE92C1C797A7700599158 /* menu_item_can@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DAE92B1C797A7700599158 /* menu_item_can@2x.png */; settings = {ASSET_TAGS = (); }; };
-		43DAE9321C79813100599158 /* NSMutableDictionary+CJMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE9311C79813100599158 /* NSMutableDictionary+CJMutableDictionary.m */; settings = {ASSET_TAGS = (); }; };
-		43DAE9351C798D4600599158 /* NSMutableArray+CJNSMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE9341C798D4600599158 /* NSMutableArray+CJNSMutableArray.m */; settings = {ASSET_TAGS = (); }; };
-		43DAE9381C798EB800599158 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE9371C798EB800599158 /* ExchangeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		43DAE93B1C79B75B00599158 /* UIButton+CJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE93A1C79B75B00599158 /* UIButton+CJButton.m */; settings = {ASSET_TAGS = (); }; };
-		43DAE93E1C79BA4300599158 /* AssociatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE93D1C79BA4300599158 /* AssociatedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		43DAE91E1C77341B00599158 /* TraversalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE91D1C77341B00599158 /* TraversalViewController.m */; };
+		43DAE9261C7839CE00599158 /* menu_item_can@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DAE9241C7839CE00599158 /* menu_item_can@3x.png */; };
+		43DAE9291C7977F800599158 /* menu_item_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DAE9271C7977F800599158 /* menu_item_h@2x.png */; };
+		43DAE92A1C7977F800599158 /* menu_item_h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DAE9281C7977F800599158 /* menu_item_h@3x.png */; };
+		43DAE92C1C797A7700599158 /* menu_item_can@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DAE92B1C797A7700599158 /* menu_item_can@2x.png */; };
+		43DAE9321C79813100599158 /* NSMutableDictionary+CJMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE9311C79813100599158 /* NSMutableDictionary+CJMutableDictionary.m */; };
+		43DAE9351C798D4600599158 /* NSMutableArray+CJNSMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE9341C798D4600599158 /* NSMutableArray+CJNSMutableArray.m */; };
+		43DAE9381C798EB800599158 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE9371C798EB800599158 /* ExchangeViewController.m */; };
+		43DAE93B1C79B75B00599158 /* UIButton+CJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE93A1C79B75B00599158 /* UIButton+CJButton.m */; };
+		43DAE93E1C79BA4300599158 /* AssociatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE93D1C79BA4300599158 /* AssociatedViewController.m */; };
+		B4BFC6C61FF3424700CA5AE1 /* NSObject+CJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BFC6C51FF3424700CA5AE1 /* NSObject+CJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		43DAE93A1C79B75B00599158 /* UIButton+CJButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CJButton.m"; sourceTree = "<group>"; };
 		43DAE93C1C79BA4300599158 /* AssociatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssociatedViewController.h; sourceTree = "<group>"; };
 		43DAE93D1C79BA4300599158 /* AssociatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssociatedViewController.m; sourceTree = "<group>"; };
+		B4BFC6C41FF3424700CA5AE1 /* NSObject+CJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CJExtension.h"; sourceTree = "<group>"; };
+		B4BFC6C51FF3424700CA5AE1 /* NSObject+CJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 				43DAE8F51C772B9D00599158 /* Assets.xcassets */,
 				43DAE8F71C772B9D00599158 /* LaunchScreen.storyboard */,
 				43DAE8FA1C772B9D00599158 /* Info.plist */,
+				B4BFC6C41FF3424700CA5AE1 /* NSObject+CJExtension.h */,
+				B4BFC6C51FF3424700CA5AE1 /* NSObject+CJExtension.m */,
 				43DAE8E91C772B9D00599158 /* Supporting Files */,
 			);
 			path = runtimeTest;
@@ -249,6 +254,8 @@
 				TargetAttributes = {
 					43DAE8E51C772B9D00599158 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 77MMW6NR5H;
+						ProvisioningStyle = Manual;
 					};
 					43DAE8FE1C772B9D00599158 = {
 						CreatedOnToolsVersion = 7.0;
@@ -321,6 +328,7 @@
 				43DAE8EB1C772B9D00599158 /* main.m in Sources */,
 				43DAE9381C798EB800599158 /* ExchangeViewController.m in Sources */,
 				43DAE93B1C79B75B00599158 /* UIButton+CJButton.m in Sources */,
+				B4BFC6C61FF3424700CA5AE1 /* NSObject+CJExtension.m in Sources */,
 				43DAE93E1C79BA4300599158 /* AssociatedViewController.m in Sources */,
 				43DAE91E1C77341B00599158 /* TraversalViewController.m in Sources */,
 				43DAE9351C798D4600599158 /* NSMutableArray+CJNSMutableArray.m in Sources */,
@@ -465,10 +473,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 77MMW6NR5H;
 				INFOPLIST_FILE = runtimeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cj.runtimeTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitauto.ework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "523bc938-65e9-4301-907a-048884b84575";
+				PROVISIONING_PROFILE_SPECIFIER = eworkpro_10.29;
 			};
 			name = Debug;
 		};
@@ -476,10 +488,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 77MMW6NR5H;
 				INFOPLIST_FILE = runtimeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cj.runtimeTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitauto.ework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "523bc938-65e9-4301-907a-048884b84575";
+				PROVISIONING_PROFILE_SPECIFIER = eworkpro_10.29;
 			};
 			name = Release;
 		};
@@ -550,6 +566,7 @@
 				43DAE9151C772B9D00599158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43DAE9161C772B9D00599158 /* Build configuration list for PBXNativeTarget "runtimeTestTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +575,7 @@
 				43DAE9181C772B9D00599158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43DAE9191C772B9D00599158 /* Build configuration list for PBXNativeTarget "runtimeTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +584,7 @@
 				43DAE91B1C772B9D00599158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

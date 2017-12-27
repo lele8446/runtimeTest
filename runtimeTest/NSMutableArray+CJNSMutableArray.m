@@ -7,18 +7,18 @@
 //
 
 #import "NSMutableArray+CJNSMutableArray.h"
-#import <objc/runtime.h>
+#import "NSObject+CJExtension.h"
 
 @implementation NSMutableArray (CJNSMutableArray)
 
 //该方法在类或者分类第一次加载内存的时候调用
 + (void)load {
     NSLog(@"执行NSMutableArray swizzling");
-    //NSMutableArray真正的类名应该是__NSArrayM
-    Method orginalMethod = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(addObject:));
-    Method newMethod = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(CJAddObject:));
-    //交换方法
-    method_exchangeImplementations(orginalMethod, newMethod);
+    //swizzling应该总是在dispatch_once中执行
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self swizzleOriginalSEL:@selector(addObject:) withSwizzlingSEL:@selector(CJAddObject:) targetClass:NSClassFromString(@"__NSArrayM")];
+    });
 }
 
 - (void)CJAddObject:(id)anObject {
